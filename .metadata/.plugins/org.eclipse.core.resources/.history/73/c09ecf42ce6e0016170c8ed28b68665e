@@ -4,6 +4,9 @@
  */
 
 public class BasicMath {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
 		 public static double square (double a){
 			 double answer;
@@ -16,4 +19,5 @@ public class BasicMath {
 			 answer = a * a * a;
 			 return answer;
 		 }
+	}
 }
