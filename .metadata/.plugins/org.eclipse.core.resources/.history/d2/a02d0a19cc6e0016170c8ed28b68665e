@@ -1,0 +1,24 @@
+
+/* METHOD
+ * public double square(double number){
+ * double answer
+ * answer = number * number
+ * return answer;
+ * }
+ *
+ *CALLINGM METHOD
+ *double result;
+ *result = square(6.0);
+ * 
+ */
+
+
+
+public class Square {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
