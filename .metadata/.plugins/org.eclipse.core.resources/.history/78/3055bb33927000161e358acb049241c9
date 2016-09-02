@@ -1,0 +1,7 @@
+
+public class Calculate {
+	public static void double (a){
+		double a;
+		
+	}
+}

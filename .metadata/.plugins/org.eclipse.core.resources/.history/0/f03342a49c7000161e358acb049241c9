@@ -1,0 +1,3 @@
+int num = 7;
+int den = 2;
+int soln = num/den;
