@@ -32,10 +32,8 @@ public class DoMath {
 		Calculate.toMixedNum(7, 2);
 		
 		
-		Calculate.foil(2, 3, 6, -7, "n");
-		
-		Calculate.isDivisibleBy(4, 2);
 		
 	}
-
+	
+	
 }

@@ -34,8 +34,6 @@ public class DoMath {
 		
 		Calculate.foil(2, 3, 6, -7, "n");
 		
-		Calculate.isDivisibleBy(4, 2);
-		
 	}
 
 }

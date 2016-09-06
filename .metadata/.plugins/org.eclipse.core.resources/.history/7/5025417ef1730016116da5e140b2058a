@@ -56,66 +56,30 @@ public class Calculate {
 		return foil;
 	}
 	
-	public static boolean isDivisibleBy(int a, int b){
-			if((a/b) < 1){
-				return false;
-			}
-			else {
-				return true;
-			}
+	public static int isDivisibleBy(int a, int b){
+		int isDivisibleBy;
+		isDivisibleBy = ;
+		return isDivisibleBy;
+		
 	}
-	
+	/*
 	public static double absValue(double a){
-			if (a > 0){
-				return a * (1);
-			}
-			else{
-				return a * (-1);
-			}
+		
 	}
-	
 	public static int max(int a, int b){
-		if (a > b){
-			return a;
-		}
-		else {
-			return b;
-		}
+
 	}
-	
-	public static int max(int a, int b, int c){
-		if (a > b && a > c){
-			return a;
-		}
-		else{
-			if(b>c){
-				return b;
-			}
-			else {
-				return c;
-			}
-		}
+	public static double max(double a, double b, double c){
+		
 	}
-	
-	public static int min (int a, int b){
-		if (a < b){
-			return a;
-		}
-		else {
-			return b;		
-		}
+	public static int min(int a){
+		
 	}
-	
-	public static double round2 (double a){
-		if ( a >= .005){
-			return a + (.01-a);
-		}
-		else {
-			return a - a;
-		}
+	public static double round2(double a){
 		
 	}
 	
+	*/
 }
 	
 	

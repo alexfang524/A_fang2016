@@ -27,15 +27,9 @@ public class DoMath {
 		System.out.println(a);
 	
 		a = Calculate.toImproperFrac(3, 1, 2);
-		System.out.println(a);
-		
-		Calculate.toMixedNum(7, 2);
-		
-		
-		Calculate.foil(2, 3, 6, -7, "n");
-		
-		Calculate.isDivisibleBy(4, 2);
-		
+	
+	
 	}
-
+	
+	
 }
