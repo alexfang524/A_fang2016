@@ -1,6 +1,6 @@
 
 public class Calculate {
-	//part 1
+	
 	public static double square (double a){
 		double answer;
 		answer = a * a;
@@ -55,7 +55,7 @@ public class Calculate {
 		System.out.println(foil);
 		return foil;
 	}
-	//part 2
+	
 	public static boolean isDivisibleBy(int a, int b){
 			if((a/b) < 1){
 				System.out.println("False");
@@ -137,16 +137,6 @@ public class Calculate {
 		}
 		return answer;
 	}
-	
-	public static int factorial (int a){
-		int factorial = 1;
-		for(int i = 1; i <= a; i ++){
-			factorial *= i;
-		}
-		return factorial;
-	}
-	public static 
-	
 	
 	
 }

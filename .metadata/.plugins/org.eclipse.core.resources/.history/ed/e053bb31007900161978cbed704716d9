@@ -44,10 +44,8 @@ public class DoMath {
 		Calculate.round2(15.6274);
 		
 		a = Calculate.exponent(2, 3);
-		System.out.println(a);
+		System.out.print(a);
 
-		a = Calculate.factorial(4);
-		System.out.println(a);
 		
 	}
 
