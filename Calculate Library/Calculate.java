@@ -58,40 +58,49 @@ public class Calculate {
 	
 	public static boolean isDivisibleBy(int a, int b){
 			if((a/b) < 1){
+				System.out.println("False");
 				return false;
 			}
 			else {
+				System.out.println("True");
 				return true;
 			}
 	}
 	
 	public static double absValue(double a){
 			if (a > 0){
+				System.out.println(a * (1));
 				return a * (1);
 			}
 			else{
+				System.out.println(a * (-1));
 				return a * (-1);
 			}
 	}
 	
 	public static int max(int a, int b){
 		if (a > b){
+			System.out.println(a);
 			return a;
 		}
 		else {
+			System.out.println(b);
 			return b;
 		}
 	}
 	
-	public static int max(int a, int b, int c){
+	public static int max2(int a, int b, int c){
 		if (a > b && a > c){
+			System.out.println(a);
 			return a;
 		}
 		else{
 			if(b>c){
+				System.out.println(b);
 				return b;
 			}
 			else {
+				System.out.println(c);
 				return c;
 			}
 		}
@@ -99,18 +108,22 @@ public class Calculate {
 	
 	public static int min (int a, int b){
 		if (a < b){
+			System.out.println(a);
 			return a;
 		}
 		else {
+			System.out.println(b);
 			return b;		
 		}
 	}
 	
 	public static double round2 (double a){
 		if ( a >= .005){
+			System.out.println(a + (.01-a));
 			return a + (.01-a);
 		}
 		else {
+			System.out.println(a - a);
 			return a - a;
 		}
 		

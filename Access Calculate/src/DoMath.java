@@ -31,10 +31,19 @@ public class DoMath {
 		
 		Calculate.toMixedNum(7, 2);
 		
-		
 		Calculate.foil(2, 3, 6, -7, "n");
 		
 		Calculate.isDivisibleBy(4, 2);
+		
+		Calculate.absValue(-4);
+		
+		Calculate.max(5, -5);
+		
+		Calculate.max2(3, 4, 7);
+		
+		Calculate.round2(15.6274);
+		
+
 		
 	}
 
