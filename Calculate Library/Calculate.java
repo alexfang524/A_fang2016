@@ -6,48 +6,57 @@ public class Calculate {
 		answer = a * a;
 		return answer;
 	}
+	
 	public static double cube (double a){
 		double cube;
 		cube = a * a * a;
 		return cube;
 	}
+	
 	public static double average(double a, double n){
 		double average;
 		average = (a + n)/2;
 		return average;
 	}
+	
 	public static double average(double a, double n, double s){
 		double average;
 		average = (a + n + s)/3;
 		return average;
 	}
+	
 	public static double toDegrees(double a){
 		double toDegrees;
 		toDegrees = a * (180/ 3.14159);
 		return toDegrees;
 	}
+	
 	public static double toRadians(double a){
 		double toRadians;
 		toRadians = a * (3.14159/180);
 		return toRadians;
 	}
+	
 	public static double discriminant(double a, double b, double c){
 		double discriminant;
 		discriminant = (b * b)-(4 * a * c);
 		return discriminant;
 	}
+	
 	public static int toImproperFrac(int a, int b, int c){
 		int toImproperFrac;
 		toImproperFrac = ((a * c) + b);
 		System.out.print(toImproperFrac + "/" + c);
 		return toImproperFrac;
 	}
+	
 	public static String toMixedNum(int a, int b){
 		String toMixedNum;
 		toMixedNum = ((a / b) + "_" + (a % b) + "/" + b);
 		System.out.println(toMixedNum);
 		return toMixedNum;
 	}
+	
 	//(ax + b)(cx + d) -> ax^2 + bx + c
 	public static String foil(int a, int b, int c, int d, String e){
 		String foil;
@@ -55,14 +64,13 @@ public class Calculate {
 		System.out.println(foil);
 		return foil;
 	}
+	
 	//part 2
 	public static boolean isDivisibleBy(int a, int b){
 			if(a % b == 0){
-//				System.out.println("True");
 				return true;
 			}
 			else {
-//				System.out.println("False");
 				return false;
 			}
 	}
@@ -118,16 +126,12 @@ public class Calculate {
 	}
 	
 	public static double round2 (double a){
-		if ( a >= .005){
-			System.out.println(a + (.01-a));
-			return a + (.01-a);
-		}
-		else {
-			System.out.println(a - a);
-			return a - a;
+		double answer;
+		double b =(int)(a*100);
+		answer = b/100;
+		return answer;
 		}
 		
-	}
 	//part 3
 	
 	public static double exponent (double base, int exponent){
@@ -162,7 +166,7 @@ public class Calculate {
 		while(b!=0) {
 			int c = a;
 			a = b;
-			b = c%b;
+			b = c % b;
 		}
 		return Math.abs(a);
 	}
@@ -178,6 +182,10 @@ public class Calculate {
 		return squareRoot;
 	}
 	
+	public static String quadForm(int a, int b, int c){
+	
+	
+	}
 }
 	
 	
