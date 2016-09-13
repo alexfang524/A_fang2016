@@ -5,7 +5,7 @@ public class DoMath {
 		// TODO Auto-generated method stub
 		double a;
 		boolean b;
-
+		/*
 		a = Calculate.square(6.0);
 		System.out.println(a);
 		
@@ -33,12 +33,12 @@ public class DoMath {
 		Calculate.toMixedNum(7, 2);
 		
 		Calculate.foil(2, 3, 6, -7, "n");
-	
+		*/
 		
 		b = Calculate.isDivisibleBy(7, 2);
 		System.out.println(b);
 		
-		
+		/*
 		Calculate.absValue(-4);
 		
 		Calculate.max(5, -5);
@@ -52,15 +52,9 @@ public class DoMath {
 
 		a = Calculate.factorial(4);
 		System.out.println(a);
-		
+		*/
 		b = Calculate.isPrime(12);
 		System.out.println(b);
-		
-		a = Calculate.gcf(4, 2);
-		System.out.println(a);
-		
-		a = Calculate.sqrt(16);
-		System.out.println(a);
 	}
 
 }

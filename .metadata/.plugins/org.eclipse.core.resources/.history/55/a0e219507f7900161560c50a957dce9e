@@ -58,9 +58,6 @@ public class DoMath {
 		
 		a = Calculate.gcf(4, 2);
 		System.out.println(a);
-		
-		a = Calculate.sqrt(16);
-		System.out.println(a);
 	}
 
 }

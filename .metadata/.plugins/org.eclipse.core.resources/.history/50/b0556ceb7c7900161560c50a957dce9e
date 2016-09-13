@@ -158,25 +158,7 @@ public class Calculate {
 		return true;
 	}
 	
-	public static int gcf(int a, int b){
-		while(b!=0) {
-			int c = a;
-			a = b;
-			b = c%b;
-		}
-		return Math.abs(a);
-	}
 	
-	
-	public static double sqrt(int number) {
-		double t;
-		double squareRoot = number / 2;
-		do {
-			t = squareRoot;
-			squareRoot = (t + (number / t)) / 2;
-		} while ((t - squareRoot) != 0);
-		return squareRoot;
-	}
 	
 }
 	
