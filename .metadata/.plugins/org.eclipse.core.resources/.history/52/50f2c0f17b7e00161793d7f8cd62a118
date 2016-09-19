@@ -182,10 +182,10 @@ public class Calculate {
 		return squareRoot;
 	}
 	
-	public static String quadForm(int a, int b, int c){
-		
+	//public static String quadForm(int a, int b, int c){
 	
-	}
+	
+	//}
 }
 	
 	
