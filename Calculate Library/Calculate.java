@@ -127,10 +127,10 @@ public class Calculate {
 	
 	public static double round2 (double a){
 		double answer;
-		double b =(int)(a*100);
-		answer = b/100;
+		double b = (int)(a*100);
+		answer = b / 100;
 		return answer;
-		}
+	}
 		
 	//part 3
 	
