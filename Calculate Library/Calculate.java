@@ -67,12 +67,10 @@ public class Calculate {
 	
 	//part 2
 	public static boolean isDivisibleBy(int a, int b){
-			if(a % b == 0){
-				return true;
-			}
-			else {
-				return false;
-			}
+		if(b == 0){
+			throw new IllegalArgumentException();
+		}
+			return a % b == 0;
 	}
 	
 	public static double absValue(double a){
@@ -126,15 +124,24 @@ public class Calculate {
 	}
 	
 	public static double round2 (double a){
-		double answer;
-		double b = (int)(a*100);
-		answer = b / 100;
-		return answer;
+		int lastDig;
+		double b = (int)(a*1000);
+		lastDig = (int) b % 10;
+		if(lastDig >= 5){
+			b = (b + 10 - lastDig)/1000;
+		}else{
+			b = (b - lastDig)/1000;
+		}
+		return b;
+		
 	}
 		
 	//part 3
 	
 	public static double exponent (double base, int exponent){
+		if(base == 0 && exponent == 0){
+			throw new IllegalArgumentException();
+		}
 		double answer = 1;
 		for(int i = 0; i < exponent; i++){
 			answer *= base;
@@ -143,6 +150,9 @@ public class Calculate {
 	}
 	
 	public static int factorial (int a){
+		if(a < 0){
+			throw new IllegalArgumentException();
+		}
 		int factorial = 1;
 		for(int i = 1; i <= a; i ++){
 			factorial *= i;
@@ -172,7 +182,10 @@ public class Calculate {
 	}
 	
 	
-	public static double sqrt(int number) {
+	public static double sqrt(double number) {
+		if(number < 0){
+			throw new IllegalArgumentException();
+		}
 		double t;
 		double squareRoot = number / 2;
 		do {
@@ -183,9 +196,20 @@ public class Calculate {
 	}
 	
 	public static String quadForm(int a, int b, int c){
-		
-	
+		String realRoots = "";
+		double d = exponent(b, 2) - 4*a*c;
+		if(d < 0){
+			realRoots = "no real roots";
+		}else if(d == 0){
+			realRoots = Double.toString(round2(-b/2 * a));
+		}else{
+			double quadP = round2((-b + sqrt(d))/(2*a));
+			double quadN = round2((-b - sqrt(d))/(2*a));
+			realRoots = Double.toString(quadN) + " and " + Double.toString(quadP);
+		}
+		return realRoots;
 	}
+	
 }
 	
 	

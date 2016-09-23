@@ -5,6 +5,7 @@ public class DoMath {
 		// TODO Auto-generated method stub
 		double a;
 		boolean b;
+		String c;
 
 		a = Calculate.square(6.0);
 		System.out.println(a);
@@ -35,8 +36,8 @@ public class DoMath {
 		Calculate.foil(2, 3, 6, -7, "n");
 	
 		
-		b = Calculate.isDivisibleBy(7, 2);
-		System.out.println(b);
+		b = Calculate.isDivisibleBy(7, 0);
+		System.out.println("isDivisibleby: " + b);
 		
 		
 		Calculate.absValue(-4);
@@ -45,8 +46,9 @@ public class DoMath {
 		
 		Calculate.max2(3, 4, 7);
 		
-		Calculate.round2(15.6274);
-		
+		a = Calculate.round2(15.6274);
+		System.out.println("Round2: " + a);
+			
 		a = Calculate.exponent(2, 3);
 		System.out.println(a);
 
@@ -61,6 +63,9 @@ public class DoMath {
 		
 		a = Calculate.sqrt(16);
 		System.out.println(a);
+		
+		c = Calculate.quadForm(4, -2, -2);
+		System.out.println("quadForm: " + c);
 	}
 
 }
