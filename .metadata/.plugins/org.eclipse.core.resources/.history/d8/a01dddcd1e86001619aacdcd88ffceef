@@ -20,7 +20,7 @@ public class ProcessingNumbers {
 			{
 				max = num;
 			}
-			if(num > max == false){
+			else if(num < max ){
 				min = num;
 			}
 			if(num % 2 == 0)

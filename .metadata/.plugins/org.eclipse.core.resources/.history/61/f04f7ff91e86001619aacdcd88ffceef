@@ -19,9 +19,9 @@ public class ProcessingNumbers {
 			if(num > max)
 			{
 				max = num;
-			}
-			if(num > max == false){
-				min = num;
+				if(num < max){
+					min = num; 
+				}
 			}
 			if(num % 2 == 0)
 			{
