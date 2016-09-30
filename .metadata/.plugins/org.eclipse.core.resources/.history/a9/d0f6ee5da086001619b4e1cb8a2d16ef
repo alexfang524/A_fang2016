@@ -20,10 +20,8 @@ public class ProcessingNumbers {
 			{
 				max = num;
 			}
-			if(i == 0 )
+			if(num < min )
 			{
-				min = num;
-			}else if(num < min){
 				min = num;
 			}
 			if(num % 2 == 0)
