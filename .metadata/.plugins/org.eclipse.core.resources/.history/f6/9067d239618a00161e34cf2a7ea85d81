@@ -24,7 +24,7 @@ public class ProcessingNumbersWithString {
 		int total = 0;
 		int largestEven = 0;
 		
-		System.out.print("Enter a string of numbers seperated by spaces : ");
+		System.out.println("Enter a string of numbers seperated bu spaces : ");
 		for(int i = 1; i < terms ; i++){
 			int nextNum = userInput.nextInt();
 			if(i == 1)
