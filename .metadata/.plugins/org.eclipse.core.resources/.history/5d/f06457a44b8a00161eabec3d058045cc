@@ -179,7 +179,7 @@ public class Calculate {
 		}
 		return true;
 	}
-	//returns the greatest cmmon factor b/t the two numbers
+	
 	public static int gcf(int a, int b){
 		while(b!=0) {
 			int c = a;
@@ -189,7 +189,7 @@ public class Calculate {
 		return Math.abs(a);
 	}
 	
-	//returns the square root of value passed accurate to two decimal places
+	
 	public static double sqrt(double number) {
 		if(number < 0){
 			throw new IllegalArgumentException();
@@ -202,12 +202,7 @@ public class Calculate {
 		} while ((t - squareRoot) != 0);
 		return squareRoot;
 	}
-	//uses coefficients of quadratic formula to approximate the real roots
-	//there are three conditions where:
-	//if no real root print "no real root"
-	//if there is a repeated root it will only prit it once
-	//if there are two real roots returns them as strings exactly two decimal places. 
-	//the smaller one will come first
+	
 	public static String quadForm(int a, int b, int c){
 		String realRoots = "";
 		double d = exponent(b, 2) - 4*a*c;
