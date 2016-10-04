@@ -18,7 +18,7 @@ public class ProcessingNumbersWithString {
 		
 		System.out.println("How many numbers? ");
 		int terms = userInput.nextInt();
-		//ask user how many numbers they want to put
+		//User is able to type in their numbers separated by spaces
 		int min = 0;
 		int max = 0;
 		int total = 0;
@@ -27,7 +27,6 @@ public class ProcessingNumbersWithString {
 		System.out.print("Enter a string of numbers seperated by spaces : ");
 		for(int i = 1; i < terms ; i++){
 			int nextNum = userInput.nextInt();
-			//determines the sum of even numbers, the greatest number, the lowest number, and the largest even number
 			if(i == 1)
 			{
 				max = nextNum;
@@ -48,7 +47,6 @@ public class ProcessingNumbersWithString {
 			
 			
 		}
-		//prints out the totals
 		System.out.println("");
 		System.out.println("The smallest number is: " + min);
 		System.out.println("The largest number is: " + max);
