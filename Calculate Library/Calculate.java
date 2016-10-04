@@ -1,3 +1,9 @@
+// Alex Fang
+// APSC 1st period
+// This program include methods that are can be used in DoMath
+// It will calculate what ever math operation you want to perform
+// If it the number is not possible such as a negative number in a square root,
+// the console will say illegal arguement expression
 
 public class Calculate {
 	//part 1

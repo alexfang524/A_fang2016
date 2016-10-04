@@ -1,3 +1,12 @@
+//Alex Fang collaborative programming with Parsa
+//APCS 1st period
+//This program will ask the user to enter a string of numbers
+//The program will the print out the largest number the user input,
+//The sum of the even numbers,
+//the smallest number,
+//and the the total of the numbers. 
+
+
 import java.util.Scanner;
 
 public class ProcessingNumbersWithString {
@@ -8,11 +17,10 @@ public class ProcessingNumbersWithString {
 		userInput = new Scanner(System.in);
 		
 		System.out.println("Enter a string of numbers seperated by spaces: ");
+		//User is able to type in their numbers separated by spaces
 		String inputString = userInput.nextLine();
-//		int lengthOfString = inputString.length();
 		String[] splited = inputString.split(" ");
 		int lengthOfSplited = splited.length;
-		
 		
 		int min = 0;
 		int max = 0;
@@ -23,6 +31,7 @@ public class ProcessingNumbersWithString {
 		for(int i = 0; i < lengthOfSplited ; i++){
 			
 			int num = Integer.parseInt(splited[i]);
+			//Extracts value of each individual number from string into an integar
 			if(num > max)
 			{
 				max = num;
@@ -30,7 +39,9 @@ public class ProcessingNumbersWithString {
 			if(i == 0)
 			{
 				min = num;
-			}else if(num < min){
+			}
+			else if(num < min)
+			{
 				min = num;
 			}
 			if(num % 2 == 0)

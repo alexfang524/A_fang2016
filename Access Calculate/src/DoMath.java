@@ -31,20 +31,23 @@ public class DoMath {
 		a = Calculate.toImproperFrac(3, 1, 2);
 		System.out.println(a);
 		
-		Calculate.toMixedNum(7, 2);
+		c = Calculate.toMixedNum(7, 2);
+		System.out.println(c);
 		
-		Calculate.foil(2, 3, 6, -7, "n");
+		c = Calculate.foil(2, 3, 6, -7, "n");
+		System.out.println(c);
 	
-		
 		b = Calculate.isDivisibleBy(7, 0);
 		System.out.println("isDivisibleby: " + b);
 		
+		a = Calculate.absValue(-4); 
+		System.out.println(a);
 		
-		Calculate.absValue(-4);
+		a = Calculate.max(5, -5);
+		System.out.println(a);
 		
-		Calculate.max(5, -5);
-		
-		Calculate.max2(3, 4, 7);
+		a = Calculate.max2(3, 4, 7);
+		System.out.println(a);
 		
 		a = Calculate.round2(15.6274);
 		System.out.println("Round2: " + a);
