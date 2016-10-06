@@ -13,14 +13,24 @@ public class Magpie2 {
 	 */
 	public String getResponse(String statement) {
 		String response = "";
+		String trim = statement.trim();
+		int lengthOfTrim = trim.length();
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
-		} else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0) {
-			response = "Tell me more about your family.";
-		} else {
+		} else if (statement.indexOf("Mr.") >= 0) {
+			response = "He sounds like a good techer";
+		}else if (statement.indexOf("Mrs.") >= 0){
+			response = "She sounds like a good teacher."; 
+		}else if(statement.indexOf("yes") >= 0){
+			response = "You are so positive!";
+		}else if(statement.indexOf("food") >= 0){
+			response = "Are you a food lover? Me too!";
+		}else if(statement.indexOf("school") >= 0){
+			response = "School will prepare you for the future.";
+		}else if(lengthOfTrim == 0){
+			response = "Say something, please";
+		}
+		else {
 			response = getRandomResponse();
 		}
 		return response;
@@ -44,8 +54,11 @@ public class Magpie2 {
 			response = "Do you really think so?";
 		} else if (whichResponse == 3) {
 			response = "You don't say.";
+		} else if (whichResponse == 4) {
+			response = "That is brilliant!";
+		} else if (whichResponse == 5) {
+			response = "I understand.";
 		}
-
 		return response;
 	}
 }

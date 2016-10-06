@@ -5,6 +5,7 @@ public class StringExplorer {
 		String sample = "The quick brown fox jumped over the lazy dog.";
 
 		// Demonstrate the indexOf method.
+		// if substring does not occur in the string return -1
 		int position = sample.indexOf("quick");
 		System.out.println("sample.indexOf(\"quick\") = " + position);
 
@@ -14,7 +15,10 @@ public class StringExplorer {
 		System.out.println("After toLowerCase(), sample = " + sample);
 
 		// Try other methods here:
+		int notFoundPsm = sample.indexOf("slow");
+		System.out.println("sample.indexOf(\"slow\") = "+ notFoundPsm);
 
+		
 	}
 
 }
