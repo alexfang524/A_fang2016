@@ -18,7 +18,7 @@ public class Magpie2 {
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
 		} else if (statement.indexOf("Mr.") >= 0) {
-			response = "He sounds like a good techer";
+			response = "He sounds like a good teacher";
 		}else if (statement.indexOf("Mrs.") >= 0){
 			response = "She sounds like a good teacher."; 
 		}else if(statement.indexOf("yes") >= 0){
@@ -27,6 +27,8 @@ public class Magpie2 {
 			response = "Are you a food lover? Me too!";
 		}else if(statement.indexOf("school") >= 0){
 			response = "School will prepare you for the future.";
+		}else if(statement.indexOf("name") >= 0){
+			response = "My name is !";
 		}else if(lengthOfTrim == 0){
 			response = "Say something, please";
 		}

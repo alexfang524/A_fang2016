@@ -50,17 +50,15 @@ public class Calculate {
 		return discriminant;
 	}
 	//returns a mixed number into a improper fraction
-	public static int toImproperFrac(int a, int b, int c){
-		int toImproperFrac;
-		toImproperFrac = ((a * c) + b);
-		System.out.print(toImproperFrac + "/" + c);
+	public static String toImproperFrac(int a, int b, int c){
+		String toImproperFrac;
+		toImproperFrac = (((a * c) + b) + "/" + c);
 		return toImproperFrac;
 	}
 	//returns an improper fractions into a mixed number
 	public static String toMixedNum(int a, int b){
 		String toMixedNum;
 		toMixedNum = ((a / b) + "_" + (a % b) + "/" + b);
-		System.out.println(toMixedNum);
 		return toMixedNum;
 	}
 	
@@ -68,7 +66,6 @@ public class Calculate {
 	public static String foil(int a, int b, int c, int d, String e){
 		String foil;
 		foil = ((a * c) +"e^2 + " ) + (-4 * (c + d) )+ "n " + (b * d); 
-		System.out.println(foil);
 		return foil;
 	}
 	
@@ -83,38 +80,31 @@ public class Calculate {
 	//return absolute value of number
 	public static double absValue(double a){
 			if (a > 0){
-				System.out.println(a * (1));
 				return a * (1);
 			}
 			else{
-				System.out.println(a * (-1));
 				return a * (-1);
 			}
 	}
 	//returns the largest number out of the two
 	public static int max(int a, int b){
 		if (a > b){
-			System.out.println(a);
 			return a;
 		}
 		else {
-			System.out.println(b);
 			return b;
 		}
 	}
 	//return the largest number of three
-	public static int max2(int a, int b, int c){
+	public static double max(double a, double b, double c){
 		if (a > b && a > c){
-			System.out.println(a);
 			return a;
 		}
 		else{
 			if(b>c){
-				System.out.println(b);
 				return b;
 			}
 			else {
-				System.out.println(c);
 				return c;
 			}
 		}
@@ -122,11 +112,9 @@ public class Calculate {
 	//returns the mininum of the number passed
 	public static int min (int a, int b){
 		if (a < b){
-			System.out.println(a);
 			return a;
 		}
 		else {
-			System.out.println(b);
 			return b;		
 		}
 	}
@@ -172,7 +160,6 @@ public class Calculate {
 		boolean check;
 		for(int i = 2; i <= a - 1; i ++){
 			check = Calculate.isDivisibleBy(a, i);
-			System.out.println(i);
 			if(check == true){
 				return false;
 			}
@@ -205,7 +192,7 @@ public class Calculate {
 	//uses coefficients of quadratic formula to approximate the real roots
 	//there are three conditions where:
 	//if no real root print "no real root"
-	//if there is a repeated root it will only prit it once
+	//if there is a repeated root it will only print it once
 	//if there are two real roots returns them as strings exactly two decimal places. 
 	//the smaller one will come first
 	public static String quadForm(int a, int b, int c){
