@@ -61,7 +61,7 @@ public class DoMath {
 		b = Calculate.isPrime(12);
 		System.out.println("IsPrime: " + b);
 		
-		a = Calculate.gcf(8, -4);
+		a = Calculate.gcf(8, 4);
 		System.out.println("GCF: " + a);
 		
 		a = Calculate.sqrt(16);

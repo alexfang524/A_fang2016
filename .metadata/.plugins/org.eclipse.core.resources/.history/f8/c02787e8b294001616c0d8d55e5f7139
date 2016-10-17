@@ -136,10 +136,7 @@ public class Calculate {
 	//returns a value raised to the positive integer power
 	public static double exponent (double base, int exponent){
 		if(base == 0 && exponent == 0){
-			throw new IllegalArgumentException("Can not have a base of 0 and a exponent of 0.");
-		}
-		if(base % 2 != 0){
-			throw new IllegalArgumentException("Base can not be negative.");
+			throw new IllegalArgumentException("FAILED");
 		}
 		double answer = 1;
 		for(int i = 0; i < exponent; i++){
@@ -150,7 +147,7 @@ public class Calculate {
 	//returns the factorial of the value passed throws illegal arguement if not possible
 	public static int factorial (int a){
 		if(a < 0){
-			throw new IllegalArgumentException("Integer can not be negative");
+			throw new IllegalArgumentException("FAILED");
 		}
 		int factorial = 1;
 		for(int i = 1; i <= a; i ++){
@@ -176,13 +173,13 @@ public class Calculate {
 			a = b;
 			b = c % b;
 		}
-		return (int) Calculate.absValue(a);
+		return Math.abs(a);
 	}
 	
 	//returns the square root of value passed accurate to two decimal places
 	public static double sqrt(double number) {
 		if(number < 0){
-			throw new IllegalArgumentException("Can not take square root of a negative number.");
+			throw new IllegalArgumentException("FAILED");
 		}
 		double t;
 		double squareRoot = number / 2;

@@ -37,7 +37,7 @@ public class DoMath {
 		c = Calculate.foil(2, 3, 6, -7, "n");
 		System.out.println("Foil: " + c);
 	
-		b = Calculate.isDivisibleBy(8, 2);
+		b = Calculate.isDivisibleBy(8, 0);
 		System.out.println("isDivisibleby: " + b);
 		
 		a = Calculate.absValue(-4); 
@@ -52,19 +52,19 @@ public class DoMath {
 		a = Calculate.round2(15.6274);
 		System.out.println("Round2: " + a);
 			
-		a = Calculate.exponent(0, 2);
+		a = Calculate.exponent(0, 0);
 		System.out.println("Exponent: " + a);
 
-		a = Calculate.factorial(2);
+		a = Calculate.factorial(-2);
 		System.out.println("Facorial: " + a);
 		
 		b = Calculate.isPrime(12);
 		System.out.println("IsPrime: " + b);
 		
-		a = Calculate.gcf(8, -4);
+		a = Calculate.gcf(4, 2);
 		System.out.println("GCF: " + a);
 		
-		a = Calculate.sqrt(16);
+		a = Calculate.sqrt(-16);
 		System.out.println("SQRT: " + a);
 		
 		c = Calculate.quadForm(4, -2, -2);

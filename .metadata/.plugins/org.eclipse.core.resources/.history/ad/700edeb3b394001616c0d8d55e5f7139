@@ -176,7 +176,7 @@ public class Calculate {
 			a = b;
 			b = c % b;
 		}
-		return (int) Calculate.absValue(a);
+		return (a);
 	}
 	
 	//returns the square root of value passed accurate to two decimal places
