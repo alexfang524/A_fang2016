@@ -30,7 +30,7 @@ public class Magpie3 {
 		if (statement.indexOf("no") >= 0) {
 			response = "Why so negative?";
 		} else if (statement.indexOf("Mr.") >= 0) {
-			response = "He sounds like a good techer";
+			response = "He sounds like a good teacher";
 		}else if (statement.indexOf("Mrs.") >= 0){
 			response = "She sounds like a good teacher."; 
 		}else if(statement.indexOf("yes") >= 0){
@@ -116,7 +116,7 @@ public class Magpie3 {
 	 * returns a non-committal string
 	 */
 	private String getRandomResponse() {
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
 		String response = "";
