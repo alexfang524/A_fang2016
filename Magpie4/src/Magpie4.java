@@ -54,9 +54,9 @@ public class Magpie4 {
 			// Look for a two word (you <something> me)
 			// pattern
 
-			if (findKeyword(statement, "you", 0)>=findKeyword(statement, "me", 0)&&findKeyword(statement, "you", 0)>=0) {
+			if (findKeyword(statement, "me", 0)>=findKeyword(statement, "you", 0)&&findKeyword(statement, "you", 0)>=0) {
 				response = transformYouMeStatement(statement);
-			} else if(findKeyword(statement, "I", 0)>=findKeyword(statement, "you", 0)&&findKeyword(statement, "I", 0)>=0){
+			} else if(findKeyword(statement, "you", 0)>=findKeyword(statement, "I", 0)&&findKeyword(statement, "I", 0)>=0){
 				response = transformIYouStatement(statement);
 			}else{
 				response = getRandomResponse();
@@ -144,10 +144,9 @@ public class Magpie4 {
 		}
 
 		int psnOfI = findKeyword(statement, "I", 0);
-		int psnOfYou = findKeyword(statement, "you", psnOfI + 3);
+		int psnOfYou = findKeyword(statement, "you", psnOfI + 1);
 
-		String restOfStatement = statement.substring(psnOfI + 3, psnOfYou)
-				.trim();
+		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
 		return "Why do you " + restOfStatement + " me?";
 	}
 
