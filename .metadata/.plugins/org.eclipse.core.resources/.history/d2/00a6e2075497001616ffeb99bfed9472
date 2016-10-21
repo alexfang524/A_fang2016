@@ -110,7 +110,7 @@ public class Calculate {
 	//takes a double and rounds it to 2 decimal places
 	public static double round2(double number){
 		double answer;
-		double intNumber = (int)(number*1000);
+		double intNumber = (int)(number*100);
 		int lastDigit;
 		lastDigit = (int)intNumber % 10;
 		if(lastDigit >= 5){

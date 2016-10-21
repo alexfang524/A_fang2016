@@ -108,18 +108,13 @@ public class Calculate {
 		}
 	}
 	//takes a double and rounds it to 2 decimal places
-	public static double round2(double number){
-		double answer;
-		double intNumber = (int)(number*1000);
-		int lastDigit;
-		lastDigit = (int)intNumber % 10;
-		if(lastDigit >= 5){
-			answer = (intNumber+10-lastDigit)/1000;
-		}else{
-			answer = (intNumber - lastDigit)/1000;
-		}
+	public static double round2(double num1){
+		double answer = (num1+0.005);
+		answer = answer*100.0;
+		answer = (int) answer;
+		answer = answer/100.0;
 		return answer;
-		
+
 
 	}
 	//takes a double and an integer and raises the double to the exponent power

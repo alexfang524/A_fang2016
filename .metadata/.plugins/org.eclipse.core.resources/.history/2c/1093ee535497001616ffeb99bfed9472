@@ -114,7 +114,7 @@ public class Calculate {
 		int lastDigit;
 		lastDigit = (int)intNumber % 10;
 		if(lastDigit >= 5){
-			answer = (intNumber+10-lastDigit)/1000;
+			answer = (intNumber+10-lastDigit)/10000;
 		}else{
 			answer = (intNumber - lastDigit)/1000;
 		}
