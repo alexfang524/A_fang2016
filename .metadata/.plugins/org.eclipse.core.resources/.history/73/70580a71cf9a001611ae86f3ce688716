@@ -52,13 +52,15 @@ public class Calculate {
 		return toMixedNum;
 	}
 	//takes binomial multiplication form and returns string of it multiplied out
-	public static String foil (int w, int x, int y , int z, String n){
-		if (w * z < 0 ){
-			return (w * y) + "n^2 + " + ((x * y) + (w * z)) + "n " + (x * z);
-		} else {
-			return (w * y) + "n^2 + " + ((x * y) + (w * z)) + "n + " + (x * z);
+	public static String foil(int num1, int num2, int num3, int num4, String x){
+		String foil;
+		if(num2 * num4 < 0){
+			int c = Math.abs(num2 * num4);
+			foil = ((num1 * num3) +"x^2 + " ) + ((num1*num4)+(num2 * num3) + "x - " + c); 
+		}else{
+			foil = ((num1 * num3) +"x^2 + " ) + ((num1*num4)+(num2 * num3) + "x " + (num2 * num4)); 
 		}
-		
+		return foil;
 	}
 	//determines of one integer can evenly go into another integer
 	public static boolean isDivisibleBy(int num1, int num2){
