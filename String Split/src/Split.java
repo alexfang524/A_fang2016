@@ -1,4 +1,5 @@
 import java.util.Arrays;
+//Alex Fang 1st period
 
 public class Split 
 {
@@ -26,32 +27,28 @@ public class Split
 		System.out.println(Arrays.toString(half));
 		
 		midOfSandwich("applespineapplesbreadlettustomatobaconmayohambreadcheesebread");
-		midOfSandwichWithSpaces("apples pineapples bread lettus tomato bacon mayo ham bread cheese");
+		midOfSandwichWithSpaces("bread apples pineapples lettus tomato bacon mayo ham bread cheese bread ");
 	}
 	
-		//Your task:
+		//Your task #1:
 		/*Write a method that take in a string like "applespineapplesbreadlettustomatobaconmayohambreadcheese" describing a sandwich
 		 * use String.split to split up the sandwich by the word "bread" and return what's in the middle of the sandwich and ignores what's on the outside
 		 * What if it's a fancy sandwich with multiple pieces of bread?
+		 * //put numbers into an array
+		*first ind, last ind, assign both to negative one and if first index not equal to -1 overide last ind
 		*/
 		public static void midOfSandwich(String sandwich){
-			String [] middle = sandwich.split("bread");
-			for(int i = 1; i <= middle.length-2; i++){
-				System.out.println(middle[i]);
+				String[] breadArray = sandwich.split("bread");
+				if(breadArray.length <= 2){
+					System.out.println("Not a sandwich");
+				}else{
+				for(int i = 1; i <breadArray.length; i++){
+					String breadMiddleStatement = breadArray[i];
+					System.out.println("Between pieces of bread is : " + breadMiddleStatement);
+				}
+				}
+
 			}
-			
-			int keyword = sandwich.indexOf("bread");
-			
-			while (keyword >= 0){
-				System.out.println(keyword);
-				keyword = sandwich.indexOf("bread", keyword +1);
-				
-			}
-			
-		}
-		//put numbers into an arrary
-		//first ind, last ind, assign both to negative one and if first index not equal to -1 overide last ind
-		//line 54 used to find if there is three breads the first index and the last index and print everything in between
 		
 		
 		//Your task pt 2:
@@ -60,9 +57,19 @@ public class Split
 		 * Again, what if it's a fancy sandwich with multiple pieces of bread?
 		*/
 		public static void midOfSandwichWithSpaces(String sandwich){
-			String [] middle = sandwich.split(" bread ");
-			for(int i = 1; i <= middle.length-2; i++){
-				System.out.println(middle[i]);
-			}	
+			String [] sandwichNumber2 = sandwich.split("bread");
+			if(sandwichNumber2.length <= 2){
+				System.out.println("Not a sandwich");
+			}else {
+				if(sandwichNumber2[1].equals(" ")){
+					System.out.println("Not a sandwich");
+				}else{
+				for(int i = 1; i < sandwichNumber2.length-1; i++){
+					String insideBread = sandwichNumber2[i];
+					System.out.println("Between pieces of bread(with spaces) is: " + insideBread);
+				}
+				}
+			}
+
 		}
 }
