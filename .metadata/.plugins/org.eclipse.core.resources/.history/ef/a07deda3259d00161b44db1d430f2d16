@@ -10,13 +10,14 @@ public class Split
 				//And it returns an array
 		
 		// Example 1: "I really like really red apples"split("really")
+				
 		String red = "I really like really red apples";
 		String[] really = red.split("really");
 		System.out.println(Arrays.toString(really));
 		
 		//Example 2: play around with String.split! what happens if you "I reallyreally like apples".split("really") ?	
 		String str = "I reallyreally like apples";
-		String[] split = str.split("really");
+		String[] split = "I reallyreally like apples".split("really");
 		System.out.println(Arrays.toString(split));
 		
 		// Example 3: "I like apples!".split(" "); 
@@ -25,10 +26,7 @@ public class Split
 		String[] half = apples.split(" ");
 		System.out.println(Arrays.toString(half));
 		
-		//Task #1
 		midOfSandwich("applespineapplesbreadlettustomatobaconmayohambreadcheesebread");
-		
-		//Task #2
 		midOfSandwichWithSpaces("bread apples pineapples lettus tomato bacon mayo ham bread cheese bread ");
 	}
 	
