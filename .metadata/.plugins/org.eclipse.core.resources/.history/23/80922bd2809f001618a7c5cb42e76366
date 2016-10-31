@@ -1,5 +1,4 @@
 import java.util.Arrays;
-//alex fang first period
 
 public class LotsOfCopies {
 
@@ -18,7 +17,7 @@ public class LotsOfCopies {
 	public static void changeMe(int x, String str, int[] arr){
 		x = 8;
 		str = "I like poop";
-		arr  = {2, 4, 6, 8 ,10};
+		//arr  = {2, 4, 6, 8 ,10};
 	}
 
 }
