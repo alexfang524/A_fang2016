@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/alexfang/Desktop/array_lab_3_for_students.zip"/>
 		<item value="/Users/alexfang/Desktop/A_fang2016/Srting Split"/>
 		<item value="/Users/alexfang/Desktop/A_fang2016/Magpie4"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/Users/alexfang/Downloads/array_lab_3_for_students.zip"/>
+		</list>
+	</section>
 </section>
