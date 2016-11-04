@@ -52,7 +52,15 @@ public class ArraysLab3
 	public static int[] remove(int[] arr, int idx)
 	{
 		assert (arr.length >= 2);
-		
+		int [] arr1 = new int[arr.length-1];
+		for(int i = 0 ;i < arr1.length; i++){
+			if(i >= idx){
+				arr1[i] = arr[i+1];
+			}else{
+			arr1[i] = arr[i];
+			}
+		}
+		return arr1;
 	}
 	
 	/*
@@ -63,7 +71,13 @@ public class ArraysLab3
 	public static int sumEven(int[] arr)
 	{
 		assert (arr.length > 0);
-		
+		int sum = 0;
+		for(int i = 0; i < arr.length; i++){
+			if(i%2==0){
+				sum += arr[i];
+			}
+		}
+		return sum;
 	}
 	
 	/*
@@ -75,9 +89,17 @@ public class ArraysLab3
 	 */
 	public static void rotateRight(int[] arr)
 	{
+		int [] arr2 = new int[arr.length];
+		for(int i = 0; i < arr.length; i++){
+			arr2[i] = arr[i];
+		}
 		assert (arr.length > 0);
-		for(var i = 1; i < arr.length;i++){
-			
+		for(int i = 0 ; i < arr2.length; i++){
+			if(i == 0){
+				arr[i] = arr2[arr2.length-1];
+			} else{
+				arr[i] = arr2[i-1];
+			}
 		}
 	}
 
@@ -106,6 +128,26 @@ public class ArraysLab3
 	
 	public static void main(String[] args) 
 	{
+		int [] a1 = {5,10,15,20,25,30,35,40};
+		int [] a2 = {7,14,21,28,35,42,49,56};
+		int [] sumArr = sum(a1,a2);
+		
+		int appendNum = 200;
+		int [] appendArr = append(a1, appendNum);
+		
+		int removeIdx = 5;
+		int [] removeArr = remove(a2, removeIdx);
+		
+		int sumOfEvens = sumEven(appendArr);
+		
+		rotateRight(a1);
+		
+		System.out.println("sum: " + Arrays.toString(sumArr));
+		System.out.println("append: " + Arrays.toString(appendArr));
+		System.out.println("remove: " + Arrays.toString(removeArr));
+		System.out.println("sumEven: " + sumOfEvens);
+		System.out.println("rotateRight: " + Arrays.toString(a1));
+		
 		
 	}
 }
