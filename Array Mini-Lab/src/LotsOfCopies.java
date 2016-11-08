@@ -19,7 +19,7 @@ public class LotsOfCopies {
 	public static void changeMe(int x, String str, int [] arr){
 		x = 22;
 		str = "I like food";
-		arr [0] = 19;
+		arr [0] = 100;
 	}
 	
 

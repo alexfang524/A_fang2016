@@ -96,7 +96,7 @@ public class ArraysLab3
 		for(int i = 0; i < arr.length; i++){
 			arr2[i] = arr[i];
 		}
-		assert (arr.length > 0);
+		//assert (arr.length > 0);
 		for(int i = 0 ; i < arr2.length; i++){
 			if(i == 0){
 				arr[i] = arr2[arr2.length-1];
