@@ -31,10 +31,10 @@ public class Calculate {
 		return ((number * 3.14159) / 180);
 	}
 	//returns the value of the discriminant
-	public static double discriminant(double num1, double num2, double num3){
-		double part1 = num2 * num2;
-		double part2 = -4 * num1 * num3;
-		return part1 + part2;
+	public static double discriminant(double a, double b, double c){
+		double answer;
+		answer = (b * b) - (4 * a * c);
+		return answer;
 	}
 	//takes a mixed number and returns it as an improper fraction string
 	public static String toImproperFrac(int num1, int num2, int num3){
@@ -54,7 +54,13 @@ public class Calculate {
 	//takes binomial multiplication form and returns string of it multiplied out
 	public static String foil (int a, int b, int c , int d, String x){
 		String answer;
-		answer = (a * c) + "x^2 + " + ((d * a) + (b * c)) + "x + " + (b *d);
+		String var = "";
+		int e = b*d;
+		if(b*d < 0){
+			var = "–";
+			e = e*-1;
+	}
+		answer = (a * c) + "x^2 + " + ((d * a) + (b * c)) + "x " + var + " " + e;
 		return answer;
 	}
 	//determines of one integer can evenly go into another integer
@@ -104,17 +110,13 @@ public class Calculate {
 	}	
 	//takes a double and rounds it to 2 decimal places
 	public static double round2(double number){
-		double answer;
-		double intNumber = (int)(number*1000);
-		int lastDigit;
-		lastDigit = (int)intNumber % 10;
-		if(lastDigit >= 5){
-			answer = (intNumber+10-lastDigit)/1000;
+		double x=number*1000;
+		double y=x%10;
+		if (y >=5){
+			return (x-y+10)/1000;
 		}else{
-			answer = (intNumber - lastDigit)/1000;
+			return (x - y)/1000;
 		}
-		return answer;
-		
 
 	}
 	//takes a double and an integer and raises the double to the exponent power
@@ -205,7 +207,7 @@ public class Calculate {
 			return (min + " and " + max);
 		}
 		return ("");
-	}
+	}	
 }
 
 
