@@ -17,9 +17,11 @@ public class FracCalc {
        		//runs until user enters "quit"
        		if (inputString.indexOf("/0") >0){
        			System.out.println("Can't divide by zero!");
-       		}else if (inputString.indexOf("++") >0 || inputString.indexOf("--") >0 ||inputString.indexOf("**") >0 || inputString.indexOf("//") >0){
+       		}
+       		else if (inputString.indexOf("++") >0 || inputString.indexOf("--") >0 ||inputString.indexOf("**") >0 || inputString.indexOf("//") >0){
        			System.out.println("Cannot have that input!");
-       		}else{
+       		}
+       		else{
        			System.out.println(produceAnswer(inputString));
        		}  
        		System.out.println("Enter in another fraction");
@@ -83,15 +85,17 @@ public class FracCalc {
     	if (!(operand.indexOf("/")>0)){
     		//if operand is an integer
     		wholeNumber = Integer.parseInt(operand);
-    		}else if (!(operand.indexOf("_")>0) && (operand.indexOf("/")>0)){
-    			//if operand is a fraction
-    			numerator = Integer.parseInt(operand.substring(0, operand.indexOf("/")));
-    			denominator = Integer.parseInt(operand.substring(operand.indexOf("/")+1));
-    		}else {
-    			//if operand is a mixed number	
-    			numerator = Integer.parseInt(operand.substring(operand.indexOf("_")+1, operand.indexOf("/")));
-    			denominator = Integer.parseInt(operand.substring(operand.indexOf("/")+1));
-    			wholeNumber = Integer.parseInt(operand.substring(0,operand.indexOf("_")));
+    		}
+    	else if (!(operand.indexOf("_")>0) && (operand.indexOf("/")>0)){
+    		//if operand is a fraction
+    		numerator = Integer.parseInt(operand.substring(0, operand.indexOf("/")));
+    		denominator = Integer.parseInt(operand.substring(operand.indexOf("/")+1));
+    		}
+    	else {
+    		//if operand is a mixed number	
+    		numerator = Integer.parseInt(operand.substring(operand.indexOf("_")+1, operand.indexOf("/")));
+    		denominator = Integer.parseInt(operand.substring(operand.indexOf("/")+1));
+    		wholeNumber = Integer.parseInt(operand.substring(0,operand.indexOf("_")));
     		}  
     	
     	//method returns the components as elements of an array
@@ -100,10 +104,10 @@ public class FracCalc {
     	components [1] = denominator;
     	components [2] = wholeNumber;
     	return components;
-    	}
+    }
     
     public static String Calculate(int numeratorOne, int denominatorOne, int wholeNumberOne, int numeratorTwo, int denominatorTwo, int wholeNumberTwo, String operator){
-    	//this method takes in parsed components and does calculations
+    	//this method takes in parsed components and performs calculations
     	String calculateAnswer = " ";
     	int impropNumeratorOne;
     	int impropNumeratorTwo;
@@ -112,36 +116,40 @@ public class FracCalc {
     	if (wholeNumberOne < 0){
     		wholeNumberOne *= -1;
     		impropNumeratorOne = -1 *(wholeNumberOne*denominatorOne+numeratorOne);
-    		}else {
-    			impropNumeratorOne = wholeNumberOne*denominatorOne+numeratorOne;
     	}
-    	
-    	if (wholeNumberTwo < 0){	
+    	else {
+    		impropNumeratorOne = wholeNumberOne*denominatorOne+numeratorOne;
+    	}
+    	if (wholeNumberTwo < 0){
     		wholeNumberTwo *= -1;
     		impropNumeratorTwo = -1 *(wholeNumberTwo*denominatorTwo+numeratorTwo);
-    		}else{
-    			impropNumeratorTwo = wholeNumberTwo*denominatorTwo+numeratorTwo;
     	}
-    	
-    	//initializing variables for reduced
+    	else{
+    		impropNumeratorTwo = wholeNumberTwo*denominatorTwo+numeratorTwo;
+    	}
+    	//preparing variables to store results of operations to send into the reduce method
     	int answerNumerator;
-    	int sameDenominator = denominatorOne * denominatorTwo;
-    	int quotientforDenominator = denominatorOne * impropNumeratorTwo;
+    	int commonDenominator = denominatorOne * denominatorTwo;
+    	int quotientDenominator = denominatorOne * impropNumeratorTwo;
     	
     	//calls method depending on operator
     	if (operator.equals("+")){  		
     		answerNumerator = add(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = reduce(answerNumerator,sameDenominator);
-    	}else if (operator.equals("-")){
+    		calculateAnswer = reduce(answerNumerator,commonDenominator);
+    	}
+    	else if (operator.equals("-")){
     		answerNumerator = subtract(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = reduce(answerNumerator,sameDenominator);
-    	}else if (operator.equals("*")){
+    		calculateAnswer = reduce(answerNumerator,commonDenominator);
+    	}
+    	else if (operator.equals("*")){
     		answerNumerator = multiply(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = reduce(answerNumerator,sameDenominator);
-    	}else {
+    		calculateAnswer = reduce(answerNumerator,commonDenominator);
+    	}
+    	else {
     		answerNumerator = divide(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = reduce(answerNumerator,quotientforDenominator);
+    		calculateAnswer = reduce(answerNumerator,quotientDenominator);
     	}   
+
 		return calculateAnswer;
     }
     
@@ -155,45 +163,25 @@ public class FracCalc {
     		b = a % b;
     		a = gcf;
     	}
-    		
     	//reduces by the greatest common factor
     	answerNumerator /= gcf;
     	answerDenominator /= gcf;
+
     	if (answerNumerator % answerDenominator == 0){
            	//formats return answer for integer
     		return answerNumerator/answerDenominator + "";
-    	}else if (answerNumerator / answerDenominator != 0 ){
+    	}
+    	else if (answerNumerator / answerDenominator != 0 ){
     		//formats return answer for mixed number
     		return answerNumerator/answerDenominator + "_" + abs(answerNumerator) % abs(answerDenominator) + "/" + abs(answerDenominator);
-    	}else {
+    	}
+    	else {
 			//formats answer for simple fraction
     		if (answerDenominator<0) {
     			answerNumerator *= -1;
     		}
     		return answerNumerator + "/" + abs(answerDenominator);
     	}
-    }
- 
-	
-	//operation methods
-    public static int multiply(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){
-    	int productNumerator = impropNumeratorOne * impropNumeratorTwo;
-    	return productNumerator;
-    }
-    
-    public static int add(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){   	
-    	int sumNumerator = (impropNumeratorOne*impropDenominatorTwo)+ (impropNumeratorTwo*impropDenominatorOne);
-    	return sumNumerator;
-    }
-    
-    public static int subtract(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){   	
-    	int sumNumerator = (impropNumeratorOne*impropDenominatorTwo)- (impropNumeratorTwo*impropDenominatorOne);
-    	return sumNumerator;
-    }
-    
-    public static int divide(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){ 	
-    	int quotientNumerator = impropNumeratorOne * impropDenominatorTwo;
-    	return quotientNumerator;
     }
     
 	public static int abs (int value){
@@ -205,4 +193,24 @@ public class FracCalc {
 		return answer;
 	}
 	
+	//self-explanatory operation methods
+    public static int add(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){   	
+    	int sumNumerator = (impropNumeratorOne*impropDenominatorTwo)+ (impropNumeratorTwo*impropDenominatorOne);
+    	return sumNumerator;
+    }
+    
+    public static int subtract(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){   	
+    	int sumNumerator = (impropNumeratorOne*impropDenominatorTwo)- (impropNumeratorTwo*impropDenominatorOne);
+    	return sumNumerator;
+    }
+    
+    public static int multiply(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){
+    	int productNumerator = impropNumeratorOne * impropNumeratorTwo;
+    	return productNumerator;
+    }
+    
+    public static int divide(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){ 	
+    	int quotientNumerator = impropNumeratorOne * impropDenominatorTwo;
+    	return quotientNumerator;
+    }
 }
