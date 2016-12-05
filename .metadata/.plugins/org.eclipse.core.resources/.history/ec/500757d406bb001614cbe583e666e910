@@ -43,7 +43,7 @@ public class FracCalc {
         	operand = finalAnswer;
         	operator = components[i+1];
         	operand2 = components[i+2];
-        	finalAnswer = calculateBoth(operand2, operand, operator);
+        	finalAnswer = calculateTwo(operand2, operand, operator);
         	i += 2;
     	}
     	
@@ -52,7 +52,7 @@ public class FracCalc {
     	  
     }
     
-    public static String calculateBoth (String operand2, String operand, String operator){
+    public static String calculateTwo (String operand2, String operand, String operator){
     	//this method calculates the answer to two operands
     	
     	//call the parse function to separate operand1
@@ -67,7 +67,7 @@ public class FracCalc {
     	int denominatorTwo = parsedTwo [1];
     	int wholeNumberTwo = parsedTwo [2];
     	
-    	//call calculate function on the two operands' parsed components
+    	//Call calculate function on the two operands' parsed components
     	String calculateAnswer = FracCalc.Calculate(numeratorOne, denominatorOne, wholeNumberOne, numeratorTwo, denominatorTwo, wholeNumberTwo, operator);
     	
     	//returns the solution
@@ -131,21 +131,21 @@ public class FracCalc {
     	//calls method depending on operator
     	if (operator.equals("+")){  		
     		answerNumerator = add(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = convertToProperForm(answerNumerator,sameDenominator);
+    		calculateAnswer = reduce(answerNumerator,sameDenominator);
     	}else if (operator.equals("-")){
     		answerNumerator = subtract(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = convertToProperForm(answerNumerator,sameDenominator);
+    		calculateAnswer = reduce(answerNumerator,sameDenominator);
     	}else if (operator.equals("*")){
     		answerNumerator = multiply(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = convertToProperForm(answerNumerator,sameDenominator);
+    		calculateAnswer = reduce(answerNumerator,sameDenominator);
     	}else {
     		answerNumerator = divide(impropNumeratorOne,denominatorOne, impropNumeratorTwo,denominatorTwo);
-    		calculateAnswer = convertToProperForm(answerNumerator,quotientforDenominator);
+    		calculateAnswer = reduce(answerNumerator,quotientforDenominator);
     	}   
 		return calculateAnswer;
     }
     
-    public static String convertToProperForm (int answerNumerator, int answerDenominator){
+    public static String reduce (int answerNumerator, int answerDenominator){
     	//reduces the fraction into proper form by calculating the greatest common factor (ignores the signs)
     	int a = abs(answerNumerator);
     	int b = abs(answerDenominator);
@@ -173,37 +173,25 @@ public class FracCalc {
     		return answerNumerator + "/" + abs(answerDenominator);
     	}
     }
-    
+ 
 	
 	//operation methods
-    public static int multiply(int impropNumeratorOne,
-    						   int impropDenominatorOne, 
-    						   int impropNumeratorTwo, 
-    						   int impropDenominatorTwo){
+    public static int multiply(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){
     	int productNumerator = impropNumeratorOne * impropNumeratorTwo;
     	return productNumerator;
     }
     
-    public static int add(int impropNumeratorOne,
-    					  int impropDenominatorOne, 
-    					  int impropNumeratorTwo, 
-    					  int impropDenominatorTwo){   	
+    public static int add(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){   	
     	int sumNumerator = (impropNumeratorOne*impropDenominatorTwo)+ (impropNumeratorTwo*impropDenominatorOne);
     	return sumNumerator;
     }
     
-    public static int subtract(int impropNumeratorOne,
-    						   int impropDenominatorOne, 
-    						   int impropNumeratorTwo, 
-    						   int impropDenominatorTwo){   	
+    public static int subtract(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){   	
     	int sumNumerator = (impropNumeratorOne*impropDenominatorTwo)- (impropNumeratorTwo*impropDenominatorOne);
     	return sumNumerator;
     }
     
-    public static int divide(int impropNumeratorOne,
-    						 int impropDenominatorOne, 
-    						 int impropNumeratorTwo, 
-    						 int impropDenominatorTwo){ 	
+    public static int divide(int impropNumeratorOne,int impropDenominatorOne, int impropNumeratorTwo, int impropDenominatorTwo){ 	
     	int quotientNumerator = impropNumeratorOne * impropDenominatorTwo;
     	return quotientNumerator;
     }
