@@ -46,6 +46,7 @@ public class FracCalc {
         	i += 2;
     	}
     	return finalAnswer;
+    	
     	  
     }
     
@@ -172,8 +173,7 @@ public class FracCalc {
         	components [1] = denominator;
         	components [2] = wholeNumber;
         	return components;
-        	
-    }
+        	}
     
     
 	//operation methods

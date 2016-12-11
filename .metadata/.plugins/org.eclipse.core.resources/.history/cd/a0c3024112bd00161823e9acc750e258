@@ -46,6 +46,7 @@ public class FracCalc {
         	i += 2;
     	}
     	return finalAnswer;
+    	
     	  
     }
     
@@ -116,9 +117,14 @@ public class FracCalc {
     
     public static String convertToProperForm (int answerNumerator, int answerDenominator){
     	//reduces the fraction into proper form by calculating the greatest common factor (ignores the signs)
-    	int a = abs(answerNumerator);
-    	int b = abs(answerDenominator);
-    	
+    	int a = answerNumerator;
+    	if(answerNumerator < 0){
+    		a = answerNumerator*-1;
+    	}   
+    	int b = answerDenominator;
+    	if(answerNumerator < 0){
+    		b = answerDenominator*-1;
+    	}
     	int gcf = 1;
     	while (b > 0){
     		gcf = b;
@@ -134,12 +140,12 @@ public class FracCalc {
     		return answerNumerator/answerDenominator + "";
     	}else if (answerNumerator / answerDenominator != 0 ){
     		//return answer for mixed number
-    		return answerNumerator/answerDenominator + "_" + abs(answerNumerator) % abs(answerDenominator) + "/" + abs(answerDenominator);
+    		return answerNumerator/answerDenominator + "_" + answerNumerator*-1 % answerDenominator*-1 + "/" + answerDenominator*-1;
     	}else {
 			//answer for simple fraction
     		if (answerDenominator<0) {
     			answerNumerator *= -1;
-    			return answerNumerator + "/" + abs(answerDenominator);
+    			return answerNumerator + "/" + answerDenominator*-1;
     		}
     		return answerNumerator + "/" + answerDenominator;
     	}
@@ -172,8 +178,7 @@ public class FracCalc {
         	components [1] = denominator;
         	components [2] = wholeNumber;
         	return components;
-        	
-    }
+        	}
     
     
 	//operation methods
@@ -209,13 +214,13 @@ public class FracCalc {
     	return quotientNumerator;
     }
     
-    public static int abs (int value){
+    /*public static int abs (int value){
 		int answer = value;
 		if (value < 0){
 			answer = -value;
 		}
 		return answer;
 	}
-	
+	*/
   
 }
