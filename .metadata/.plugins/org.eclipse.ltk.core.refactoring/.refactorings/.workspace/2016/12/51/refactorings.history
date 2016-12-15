@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;stupidcodingwithextramethodswedon&apos;tneed&apos;" deleteContents="false" description="Delete resource &apos;stupidcodingwithextramethodswedon&apos;tneed&apos;" element1="/stupidcodingwithextramethodswedon&apos;tneed" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1481687238324"/>&#x0A;<refactoring comment="Delete resource &apos;playerObject&apos;" deleteContents="false" description="Delete resource &apos;playerObject&apos;" element1="/playerObject" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1481763955952"/>
+</session>
