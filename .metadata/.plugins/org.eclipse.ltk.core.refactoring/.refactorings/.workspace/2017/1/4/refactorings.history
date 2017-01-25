@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 18 resources" deleteContents="false" description="Delete 18 resources" element1="/A_fang2016" element10="/MagPie2" element11="/Magpie3" element12="/Magpie4" element13="/Math" element14="/PairPrograming" element15="/playerObject" element16="/Pokemon" element17="/String Split" element18="/TempConverter" element2="/Acces Calculate" element3="/ACSLLAND" element4="/Array Mini-Lab" element5="/arrays_lab_3_basic_skills_1dim" element6="/Calculate Library" element7="/CodeMagnet" element8="/FracCalc" element9="/Hourglass" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="18" stamp="1485306271904"/>
+</session>
